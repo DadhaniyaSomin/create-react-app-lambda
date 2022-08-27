@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { NavLink, useParams } from "react-router-dom";
+// import { motion } from "framer-motion";
+import {  useParams } from "react-router-dom";
 import axios from "../API/data";
 import "../index.css";
 
