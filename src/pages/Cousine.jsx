@@ -11,7 +11,7 @@ const Cousine = () => {
   const getCuisine = async (name) => {
     const options = {
       method: "GET",
-      url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=98b372a72de443cb9b0d59fd84776ec1&cuisine=${name}`,
+      url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=bae96180cd93409aa123517ee0f4b2a7&cuisine=${name}`,
       headers: {
         accept: "application/json",
       },

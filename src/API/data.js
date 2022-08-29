@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://api.spoonacular.com/recipes/random?apiKey=98b372a72de443cb9b0d59fd84776ec1'
+    baseURL: 'https://api.spoonacular.com/recipes/random?apiKey=bae96180cd93409aa123517ee0f4b2a7'
 });
 

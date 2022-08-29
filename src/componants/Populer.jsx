@@ -17,7 +17,7 @@ const Populer = () => {
     //bythis we can pricent calling API agian adn again also recipe will same won;t 
     //change every time page refrease
 
-    const check = localStorage.getItem("popular");
+    const check = localStorage.getItem("vegetarian");
     if (check) {
       setPopular(JSON.parse(check));
     } else {
@@ -25,7 +25,7 @@ const Populer = () => {
 
       const options = {
         method: 'GET',
-        params: {number: '10', tags: 'veryPopular'},
+        params: {number: '10', tags: 'vegetarian'},
         headers: {
           'accept' : "application/json",
         }
@@ -33,7 +33,7 @@ const Populer = () => {
 
        const api =  await axios.request(options);
        const data = await api.data;
-       localStorage.setItem("veryPopular", JSON.stringify(data.recipes));
+       localStorage.setItem("vegetarian", JSON.stringify(data.recipes));
        setPopular(data.recipes);
     }
   };

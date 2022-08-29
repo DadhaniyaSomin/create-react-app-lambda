@@ -13,10 +13,11 @@ const Veggi = () => {
   
     const getVeggie = async () => {
   
-      const check = localStorage.getItem("veggi");
+      const check = localStorage.getItem("vegetarian");
   
       if (check) {
         setVeggi(JSON.parse(check));
+
       } else {
         const options = {
           method: 'GET',
