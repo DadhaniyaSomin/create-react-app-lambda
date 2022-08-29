@@ -1,15 +1,18 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import { FaSearch } from "react-icons/fa";
 
 const Search = () => {
   const [search, setSearch] = useState("");
-
-  console.log(search);
+  const nevigate = useNavigate();
+  
   const submitHandaler = (e) => {
-    // e.preventDefault();
-    console.log(search);
+    e.preventDefault();
+    nevigate("/search/" + search)
   };
+
+
   return (
     <form className="sform" onSubmit={submitHandaler}>
       {/* <FaSearch className="inputSvg"></FaSearch> */}
