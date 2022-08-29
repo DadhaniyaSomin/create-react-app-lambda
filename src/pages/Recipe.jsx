@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import { motion } from "framer-motion";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "../API/data";
 import styled from "styled-components";
 import "../index.css";
-import data from "../API/data";
 
 const Recipe = () => {
   const [recipe, SetRecipe] = useState([]);

@@ -4,7 +4,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import axios from '../API/data';
 import { Link } from "react-router-dom";
-import recipe from "../pages/Recipe";
 
 const Veggi = () => {
     const [veggi, setVeggi] = useState([]);

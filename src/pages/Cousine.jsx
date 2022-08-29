@@ -32,8 +32,10 @@ const Cousine = () => {
       {cuisine.map((items) => {
         return (
           <div className="Card" key={items.id}>
+           <Link to={'/search/' + items.id}>
             <img src={items.image} alt=""></img>
             <h4>{items.title}</h4>
+            </Link>
           </div>
         );
       })}
