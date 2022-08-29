@@ -3,6 +3,8 @@ import "../index.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import axios from '../API/data';
+import { Link } from "react-router-dom";
+import recipe from "../pages/Recipe";
 
 const Veggi = () => {
     const [veggi, setVeggi] = useState([]);
@@ -52,9 +54,11 @@ const Veggi = () => {
               return (
                 <SplideSlide key={veggi.id}>
                   <div className="Card">
+                  <Link to={'/recipe/' + veggi.id} >
                     <p> {veggi.title}</p>
                     <img src={veggi.image} alt={veggi.title}></img>
                     <div className="Gradiant"></div>
+                    </Link>
                   </div>
                 </SplideSlide>
               );

@@ -142,9 +142,21 @@ a:active {
 }
 
 .inputSvg{
-  postion : absolute;
+  position : absolute;
   top : 50%;
   left : 0%;
   transform : translate(100% ,-50%);
   color: white;
+}
+
+
+.imgRecipe{
+  border-radius: 2rem;
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 40%;
+    object-fit: cover;
+    padding: 19px;
+    margin-left: 18%;
 }

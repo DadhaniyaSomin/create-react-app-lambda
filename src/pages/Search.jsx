@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { motion } from "framer-motion";
-import {  useParams } from "react-router-dom";
+import {  useParams , Link} from "react-router-dom";
 import axios from "../API/data";
 import "../index.css";
 
@@ -11,7 +11,7 @@ const Search = () => {
     const getSearch = async (search) => {
       const options = {
         method: "GET",
-        url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=bae96180cd93409aa123517ee0f4b2a7&cuisine=${search}`,
+        url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=1f07cf1909964d859a12b07ef33b30c1&cuisine=${search}`,
         headers: {
           accept: "application/json",
         },
@@ -32,8 +32,10 @@ const Search = () => {
         {search.map((items) => {
           return (
             <div className="Card" key={items.id}>
+            <Link to={'/recipe/' + items.id} >
               <img src={items.image} alt=""></img>
               <h4>{items.title}</h4>
+              </Link>
             </div>
           );
         })}

@@ -3,6 +3,7 @@ import "../index.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import axios from '../API/data';
+import { Link } from "react-router-dom";
 
 const Populer = () => {
   const [popular, setPopular] = useState([]);
@@ -56,9 +57,11 @@ const Populer = () => {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="Card">
+                <Link to={'/recipe/' + recipe.id} >
                   <p> {recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title}></img>
                   <div className="Gradiant"></div>
+                  </Link>
                 </div>
               </SplideSlide>
             );

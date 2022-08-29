@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { motion } from "framer-motion";
-import {  useParams } from "react-router-dom";
+import {  Link, useParams } from "react-router-dom";
 import axios from "../API/data";
 import "../index.css";
 
@@ -11,7 +11,7 @@ const Cousine = () => {
   const getCuisine = async (name) => {
     const options = {
       method: "GET",
-      url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=bae96180cd93409aa123517ee0f4b2a7&cuisine=${name}`,
+      url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=1f07cf1909964d859a12b07ef33b30c1&cuisine=${name}`,
       headers: {
         accept: "application/json",
       },
