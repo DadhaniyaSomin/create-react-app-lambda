@@ -32,7 +32,7 @@ const Recipe = () => {
     <DetailWrrapper>
       <div>
         <h2>{recipe.title}</h2>
-        <img src={recipe.image} className="imgRecipe"></img>
+        <img src={recipe.image} className="imgRecipe" alt=""></img>
       </div>
 
       <Info>
